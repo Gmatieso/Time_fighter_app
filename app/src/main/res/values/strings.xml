@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TimefighterApp</string>
     <string name="yourScore">yourScore$1%d</string>
+    <string  name = "timeleft"> Time left: %1$1</string>
 </resources>
