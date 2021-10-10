@@ -1,4 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TimefighterApp</string>
     <string name="yourScore">yourScore$1%d</string>
 </resources>
