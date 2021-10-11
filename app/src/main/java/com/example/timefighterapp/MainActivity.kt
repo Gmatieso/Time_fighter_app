@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         // populating our properties
         myButton = findViewById(R.id.tap_me)
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
+        timeleft = findViewById(R.id.timeLeftTextview)
         
+
     }
 }
