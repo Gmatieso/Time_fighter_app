@@ -14,6 +14,13 @@ class MainActivity : AppCompatActivity() {
     internal lateinit var gameScoreTextView: TextView
     // reference to our TextView timeleft
     internal lateinit var timeleft: TextView
+    
+    
+    internal var gamestarted = false
+
+    internal lateinit var countDownTimer: countDownTimer
+    internal val initialCountDown: Long = 60000
+    internal val countDownInterval: Long = 1000
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
