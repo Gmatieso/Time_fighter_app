@@ -12,5 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        myButton = findViewById(R.id.tap_me)
+        gameScoreTextView = findViewById(R.id.gameScoreTextView)
     }
 }
