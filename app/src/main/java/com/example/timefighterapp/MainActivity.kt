@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                // to be implemented later
+                endGame()
             }
         }
         gamestarted  = false
@@ -73,5 +74,10 @@ class MainActivity : AppCompatActivity() {
     private fun startGame(){
         countDownTimer.start()
         gamestarted = true
+    }
+    private fun endGame(){
+        Toast.makeText(this,getString(R.string.gameOverMessage,score),Toast.LENGTH_LONG)
+            .show()
+        resetGame()
     }
 }
