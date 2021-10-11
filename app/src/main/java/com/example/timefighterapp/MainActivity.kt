@@ -5,6 +5,7 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     internal lateinit var myButton: Button
+    internal lateinit var gameScoreTextView: Textview
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
