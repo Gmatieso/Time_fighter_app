@@ -61,10 +61,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun incrementScore() {
+        if (!gameStarted){
+            startGame()
+        }
         // implementing body of the method
         score += 1
         // updated text score
         val newScore = getString(R.string.yourScore, score)
         gameScoreTextView.text = newScore
+    }
+    private fun startGame(){
+        countDownTimer.start()
+        gameStarted = true
     }
 }
