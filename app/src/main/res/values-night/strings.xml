@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="yourScore">yourScore$1%d</string>
+    <string name="timeleft_1_d">Timeleft %1$d</string>
+    <string name="tap_me">Tap me</string>
 </resources>
