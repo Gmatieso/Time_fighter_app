@@ -10,12 +10,16 @@ class MainActivity : AppCompatActivity() {
     internal lateinit var myButton: Button
     //reference to our TextView properties
     internal lateinit var gameScoreTextView: TextView
+    // reference to our TextView timeleft
+    internal lateinit var timeleft: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // populating our properties 
+        // populating our properties
         myButton = findViewById(R.id.tap_me)
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
+        
     }
 }
