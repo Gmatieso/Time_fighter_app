@@ -6,7 +6,7 @@ import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
-    // reference to our button view properties
+    // reference to our button view properties or declaring the variable
     internal lateinit var myButton: Button
     //reference to our TextView properties
     internal lateinit var gameScoreTextView: TextView
@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // populating our properties
+        // populating our properties or assignment of data 
         myButton = findViewById(R.id.tap_me)
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
         timeleft = findViewById(R.id.timeLeftTextview)
-        
+
 
     }
 }
