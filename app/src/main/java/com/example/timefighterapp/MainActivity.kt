@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             incrementScore()
 
         }
+       // initializing the score to zero
+       gameScoreTextView.text = getString(R.string.yourScore, 0)
 
     }
 
