@@ -1,6 +1,7 @@
 package com.example.timefighterapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.TextView
 
@@ -13,12 +14,12 @@ class MainActivity : AppCompatActivity() {
     //reference to our TextView properties
     internal lateinit var gameScoreTextView: TextView
     // reference to our TextView timeleft
-    internal lateinit var timeleft: TextView
+    internal lateinit var timeLeftTextView: TextView
     
     
     internal var gamestarted = false
 
-    internal lateinit var countDownTimer: countDownTimer
+    internal lateinit var countDownTimer: CountDownTimer
     internal val initialCountDown: Long = 60000
     internal val countDownInterval: Long = 1000
 
@@ -29,15 +30,34 @@ class MainActivity : AppCompatActivity() {
         // populating our properties or assignment of data
         myButton = findViewById(R.id.tap_me)
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
-        timeleft = findViewById(R.id.timeLeftTextview)
+        timeLeftTextView = findViewById(R.id.timeLeftTextview)
         //handle a tap by setting the onClick listener
         myButton.setOnClickListener { view ->
             incrementScore()
 
         }
-       // initializing the score to zero
-       gameScoreTextView.text = getString(R.string.yourScore, 0)
+       resetGame()
 
+    }
+    //create method resetGame()
+    private fun resetGame() {
+        score = 0
+        gameScoreTextView.text = getString(R.string.yourScore, score)
+        val initializeTimeLeft = initialCountDown / 1000
+        timeLeftTextView.text = getString(R.string.timeleft,initializeTimeLeft)
+
+        countDownTimer  = object : CountDownTimer( initialCountDown, countDownInterval) {
+            override  fun onTick(millisuntilFinished:Long){
+                val timeLeft = millisuntilFinished / 1000
+                timeLeftTextView.text  = getString(R.string.timeleft, timeLeft)
+
+            }
+
+            override fun onFinish() {
+                // to be implemented later
+            }
+        }
+        gamestarted  = false
     }
 
     private fun incrementScore() {
