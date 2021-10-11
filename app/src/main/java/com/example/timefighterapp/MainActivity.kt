@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun incrementScore() {
-        if (!gameStarted){
+        if (!gamestarted){
             startGame()
         }
         // implementing body of the method
@@ -72,6 +72,6 @@ class MainActivity : AppCompatActivity() {
     }
     private fun startGame(){
         countDownTimer.start()
-        gameStarted = true
+        gamestarted = true
     }
 }
