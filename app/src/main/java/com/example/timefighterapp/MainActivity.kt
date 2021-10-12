@@ -10,11 +10,11 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
     // variable initialization
     internal var score = 0
-    // reference to our button view properties or declaring the variable
+    // reference to our button view widget  or declaring the variable
     internal lateinit var myButton: Button
-    //reference to our TextView properties
+    //reference to our TextView  widget  gameScoreTextView properties
     internal lateinit var gameScoreTextView: TextView
-    // reference to our TextView timeleft
+    // reference to our TextView timeleft widget 
     internal lateinit var timeLeftTextView: TextView
     
     
