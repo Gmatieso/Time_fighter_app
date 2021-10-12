@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         score = 0
         // referencing widget gameScoreTextView passing in string yourScore and initializing value to  zero
         gameScoreTextView.text = getString(R.string.yourScore, score)
-        
+
         val initializeTimeLeft = initialCountDown / 1000
 
         // referencing widget timeLeftTextView passing in string timeleft  and initializing in value initializeTimeLeft
@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
     // increment score method
     private fun incrementScore() {
         if (!gamestarted){
+            // calling the start game function 
             startGame()
         }
         // implementing body of the method
