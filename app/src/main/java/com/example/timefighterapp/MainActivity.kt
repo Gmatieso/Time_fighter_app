@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     internal lateinit var myButton: Button
     //reference to our TextView  widget  gameScoreTextView properties
     internal lateinit var gameScoreTextView: TextView
-    // reference to our TextView timeleft widget 
+    // reference to our TextView timeleft widget
     internal lateinit var timeLeftTextView: TextView
     
     
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
         timeLeftTextView = findViewById(R.id.timeLeftTextview)
 
-        //handle a tap by setting the onClick listener
+        // setting onclick listener on our widget myButton handle a tap by setting the onClick listener
         myButton.setOnClickListener { view ->
             incrementScore()
 
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
         gamestarted  = false
     }
-
+    // increment score method
     private fun incrementScore() {
         if (!gamestarted){
             startGame()
