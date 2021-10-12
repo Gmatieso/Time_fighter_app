@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     // reference to our TextView timeleft widget
     internal lateinit var timeLeftTextView: TextView
     
-    
+    //  Global variable declaration and initialization for the reset Game method
     internal var gamestarted = false
 
     internal lateinit var countDownTimer: CountDownTimer
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         // setting onclick listener on our widget myButton handle a tap by setting the onClick listener
         myButton.setOnClickListener { view ->
-            // calling the increment score method 
+            // calling the increment score method
             incrementScore()
 
         }
