@@ -28,15 +28,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         // populating our properties or assignment of data
         myButton = findViewById(R.id.tap_me)
         gameScoreTextView = findViewById(R.id.gameScoreTextView)
         timeLeftTextView = findViewById(R.id.timeLeftTextview)
+
         //handle a tap by setting the onClick listener
         myButton.setOnClickListener { view ->
             incrementScore()
 
         }
+        // Calling the reset game method
        resetGame()
 
     }
