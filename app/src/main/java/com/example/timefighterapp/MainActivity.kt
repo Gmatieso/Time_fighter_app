@@ -48,9 +48,12 @@ class MainActivity : AppCompatActivity() {
     private fun resetGame() {
         // variable initialization of  score to zero
         score = 0
-        // referencing widget gameScoreTextView passing in string yourScore and referencing value zero
+        // referencing widget gameScoreTextView passing in string yourScore and initializing value to  zero
         gameScoreTextView.text = getString(R.string.yourScore, score)
+        
         val initializeTimeLeft = initialCountDown / 1000
+
+        // referencing widget timeLeftTextView passing in string timeleft  and initializing in value initializeTimeLeft
         timeLeftTextView.text = getString(R.string.timeleft,initializeTimeLeft)
 
         countDownTimer  = object : CountDownTimer( initialCountDown, countDownInterval) {
