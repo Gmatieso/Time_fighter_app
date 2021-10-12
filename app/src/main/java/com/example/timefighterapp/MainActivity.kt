@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         // setting onclick listener on our widget myButton handle a tap by setting the onClick listener
         myButton.setOnClickListener { view ->
+            // calling the increment score method 
             incrementScore()
 
         }
