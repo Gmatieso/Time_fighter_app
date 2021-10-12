@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     // increment score method
     private fun incrementScore() {
         if (!gamestarted){
-            // calling the start game function 
+            // calling the start game function
             startGame()
         }
         // implementing body of the method
@@ -81,13 +81,16 @@ class MainActivity : AppCompatActivity() {
         val newScore = getString(R.string.yourScore, score)
         gameScoreTextView.text = newScore
     }
+    // implementing the startGame() method
     private fun startGame(){
         countDownTimer.start()
         gamestarted = true
     }
+    // implementing the endGame method
     private fun endGame(){
         Toast.makeText(this,getString(R.string.gameOverMessage,score),Toast.LENGTH_LONG)
             .show()
+        // calling the resetGame() method 
         resetGame()
     }
 }
