@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     // reference to our TextView timeleft widget
     internal lateinit var timeLeftTextView: TextView
     
-    //  Global variable declaration and initialization for the reset Game method
+    //  Global variable declaration and initialization of  the reset Game method
     internal var gamestarted = false
 
     internal lateinit var countDownTimer: CountDownTimer
@@ -46,7 +46,9 @@ class MainActivity : AppCompatActivity() {
     }
     //create method resetGame()
     private fun resetGame() {
+        // variable initialization of  score to zero
         score = 0
+        // referencing widget gameScoreTextView passing in string yourScore and referencing value zero
         gameScoreTextView.text = getString(R.string.yourScore, score)
         val initializeTimeLeft = initialCountDown / 1000
         timeLeftTextView.text = getString(R.string.timeleft,initializeTimeLeft)
